@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+
+        <meta name="description" content="">
+
+		<link rel="stylesheet/less" href="less/style.less">
+		<script src="js/vendor/less-1.3.0.min.js"></script>
+
+
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+		<link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
+
+    </head>
+    <body>
+    	<a name="top"></a>
+
+		<div id="page">
+			<header>
+			<div class="social-icons">
+			<a href="https://www.facebook.com/JustVoteColorado"><img src="http://www.justvotecolorado.org/images/7.png" width="43" height="40" alt="" /></a>
+			<a href="http://www.twitter.com/justvoteco"><img src="http://www.justvotecolorado.org/images/8.png" width="42" height="40" alt="" /></a>
+			<a href="http://todosavotarco.org/"><img src="http://www.justvotecolorado.org/justvote/img/spanish.png" width="71" height="53" style="margin-top: 10px" alt="" /></a>
+			</div>
+
+			<a id="logo" href="/"><img src="http://www.justvotecolorado.org/images/16.png" style=""></a>
+			</header>
+	        <div id="main">
+				<ul class="top nav">
+					<!-- <li><a href="/index.php?id=2">Voter Info</a></li>
+					<li><a href="/index.php?s=blog">Issues + News</a></li>
+					<li><a href="/index.php?id=4">Volunteer</a></li>
+					<li><a href="/index.php?id=7">Calendar</a></li>
+					<li><a href="/index.php?id=5">Know Your Rights</a></li> -->
+					<li><a href="/index.php?id=6">About us</a></li>
+					<li><a href="/index.php?id=64">Voting in your County</a></li>
+					<li><a href="/index.php?id=8">FAQ</a></li>
+					<li><a href="https://www.kintera.org/AutoGen/Simple/Donor.asp?ievent=277104&amp;en=pkKUL7NOLaIPK2PHLhL3IiOUJjK1J9MJIeL1KlP6E">Donate</a></li>
+				</ul>
+
+				<div class="block map" id="map_block" county="boulder">
+					<h1>Find Voter Service Center & Polling Places<span class="type">&nbsp;& Ballot Drop Locations</span></h1>
+					<div id="map">
+					    <form id="geocode">
+					        <input id="address" placeholder="Enter Your Home Address" size="40">
+					         <button type="button" id="geolocate"><i class="fa fa-location-arrow"></i></button>
+					        <button type="submit">Search</button>
+					    </form>
+						<div id="canvas"></div>
+						<div id="list">
+							<h3 style="display:none"><span class="closets">Closets </span>Voter Service & Polling Centers<span class="type">&nbsp;& Ballot Drop Locations</span> in <span class="county"></span> County</h3>
+							<ul></ul>
+						</div>
+					</div>
+				</div>
+				<script type="text/javascript"> $(document).ready( function() { var election_map = new ElectionMap(map, {county: $('#map_block').attr('county'), type: 'all'}) })</script>
+
+
+	        	<div class="block phone">
+	        		<h1>Voter Hotline</h1>
+	        		<img src="img/phone.png">
+	        		<h3>866-OUR-VOTE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;866-687-8683</h3>
+	        		<h3>866-VE-Y-VOTA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;888-839-8682</h3>
+	        	</div>
+
+	        </div>
+	        <footer>
+	        	<a href="/"><img src="img/bottom-logo.png" class="bottom-logo"></a>
+	        	<div class="info">
+	        		<h2>Links</h2>
+	        		<div class="content">
+		        		<a href="/">Link</a>
+		        		<a href="/">Link</a>
+		        		<a href="/">Link</a>
+	        		</div>
+	        	</div>
+	        	<div class="info">
+	        		<h2>Contact</h2>
+	        		<div class="content">
+	        			<img src="img/phone.png">
+		        		<span>866-687-8683</span>
+		        		<span>888-839-8682</span>
+		        		<a href="/">Email</a>
+		        		<a href="/">Email</a>
+	        		</div>
+	        	</div>
+	        </footer>
+		</div>
+
+        <script type="text/javascript" src="js/main_2014.js"></script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true&libraries=geometry"></script>
+		<script type="text/javascript"> $(document).ready( function() { var election_map = new ElectionMap(map, {county: $('#map_block').attr('county'), type: 'all'}) })</script>
+    </body>
+</html>

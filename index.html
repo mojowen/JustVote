@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+
+        <meta name="description" content="">
+
+		<link rel="stylesheet/less" href="less/style.less">
+		<script src="js/vendor/less-1.3.0.min.js"></script>
+
+
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+		<link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
+    </head>
+    <body>
+    	<a name="top"></a>
+
+		<div id="page">
+			<header>
+			<div class="social-icons">
+			<a href="https://www.facebook.com/JustVoteColorado"><img src="http://www.justvotecolorado.org/images/7.png" width="43" height="40" alt="" /></a>
+			<a href="http://www.twitter.com/justvoteco"><img src="http://www.justvotecolorado.org/images/8.png" width="42" height="40" alt="" /></a>
+			<a href="http://todosavotarco.org/"><img src="http://www.justvotecolorado.org/justvote/img/spanish.png" width="71" height="53" style="margin-top: 10px" alt="" /></a>
+			</div>
+
+			<a id="logo" href="/"><img src="http://www.justvotecolorado.org/images/16.png" style=""></a>
+			</header>
+	        <div id="main">
+				<ul class="top nav">
+					<!-- <li><a href="/index.php?id=2">Voter Info</a></li>
+					<li><a href="/index.php?s=blog">Issues + News</a></li>
+					<li><a href="/index.php?id=4">Volunteer</a></li>
+					<li><a href="/index.php?id=7">Calendar</a></li>
+					<li><a href="/index.php?id=5">Know Your Rights</a></li> -->
+					<li><a href="/index.php?id=6">About us</a></li>
+					<li><a href="/index.php?id=64">Voting in your County</a></li>
+					<li><a href="/index.php?id=8">FAQ</a></li>
+					<li><a href="https://www.kintera.org/AutoGen/Simple/Donor.asp?ievent=277104&amp;en=pkKUL7NOLaIPK2PHLhL3IiOUJjK1J9MJIeL1KlP6E">Donate</a></li>
+				</ul>
+				<div class="spanish block" style="display:none;">
+					<h1>Gracias por visitar Todos A Votar CO</h1>
+					<p>Su participaci&oacute;n en estas elecciones del 2012 es muy importante para nuestra comunidad. Nuestra comunidad tiene la oportunidad de ser el voto decisivo. Usted ser&aacute; dirigido a la pagina web JustVoteCo en la cual encontrara informaci&oacute;n que ser&aacute; &uacute;til a la hora de votar.</p>
+				</div>
+	        	<div class="menu">
+	        		<div class="menu-item selected" data-open_tab="register">
+	        			<h1>Register to Vote</h1>
+	        		</div>
+	        		<div class="menu-item" data-open_tab="update">
+	        			<h1>Update Your Registration</h1>
+	        		</div>
+	        		<div class="menu-item" data-open_tab="person">
+	        			<h1>Vote in Person</h1>
+	        		</div>
+	        		<div class="menu-item" data-open_tab="mail">
+	        			<h1>Vote Your Mail Ballot</h1>
+	        		</div>
+	        	</div>
+	        	<div class="active">
+					<div class="tab" tab="register" style="display:block;">
+					    <form target="_blank" action="http://registerincolorado.org/forms" method="post">
+					      	<input name="referrer" type="hidden" value="none (http://justvotecolorado.org/)">
+					        <input placeholder="First Name" name="voter[first_name]" class="half fade" type="text" size="15" title="First Name">
+					        <input placeholder="Last Name" name="voter[last_name]" class="half fade" type="text" size="15" title="Last Name"><br>
+					        <input placeholder="Middle Name" name="voter[middle_name]" class="half fade" type="text" size="15" title="Middle Name">
+					        <input placeholder="Suffix" name="voter[suffix_name]" class="half fade" type="text" size="15" title="Suffix"><br>
+					        <input placeholder="Birthdate (mm/dd/yyyy)" name="voter[birth_date]" class="full fade" type="text" size="35" title="Birthdate (mm/dd/yyyy)"><br>
+					        <input placeholder="Email" name="voter[email]" class="full fade" type="text" size="35" title="Email"><br>
+					        <input placeholder="Colorado State ID" name="voter[cid]" class="full fade" type="text" size="35" title="Colorado State ID Number"><br>
+					        <input placeholder="Phone Number" name="voter[phone]" class="full fade" type="text" size="35" title="Phone Number"><br>
+
+					        <input name="voter[contact]" class="checkbox" type="checkbox" checked="true">
+					        <span class="checkbox">Send me a text message reminder to vote!</span><br>
+					        <input class="button" type="submit" value="Take me to Register!">
+					        <a target="_blank" href="https://nvrd.turbovote.org/register/basics">I don’t have a Colorado ID</a>
+					      </form>
+					      <p><a href="#map_block">Or you can register in person at a Voter Service & Polling Center</a></p>
+					</div>
+					<div class="tab" tab="update">
+						<p>If you need to change your address or affiliate with a political party, you can do so online or by mail.  To have a ballot mailed to you, changes must be made online or the form received by the county clerk by Monday June 16th.  After that date, voters need to visit a Voter Service & Polling Center to get a ballot.</p>
+						<p>The deadline for voters to change from one political party to another to vote in the primary election was Monday May 23.</p>
+						<p><a href="https://www.sos.state.co.us/voter-classic/secuVoterSearch.do?transactionType=voterSearch" target="_blank">Update Your Vote Registration Online</a></p>
+						<p><a href="#map_block">Or in person at your closest Voter Service & Polling Center.</a></p>
+					</div>
+	        		<div class="tab" tab="person" >
+						<p>If you want to vote in person rather than return your mail ballot, need to register to vote or update your voter registration, or if you want to vote on an accessible voting machine, you may do so at any Voter Service and Polling Center in your county.  Enter your county and address below to find the closest VSPCs to your present location, your work or your home.</p>
+						<p><a href="#map_block">Click here to find your closest Voter Service & Polling Center.</a></p>
+					</div>
+					<div class="tab" tab="mail">
+						<p>Ballots must be received by 7:00 PM on June 24th.  Postmarks do not count.  You should mail your ballot early, or drop it off at a Voter Service and Polling Center or Drop-Off Location to be sure it is received in time to be counted.</p>
+						<p><a href="#map_block">Click here to find your closest Voter Service & Polling Center or Ballot Drop Location.</a></p>
+					</div>
+				</div>
+				<div class="block map" id="map_block">
+					<h1>Find Voter Service & Polling Centers<span class="type">&nbsp;& Ballot Drop Locations</span></h1>
+					<div id="map">
+					    <form id="geocode">
+							<select id="county">
+								<option value=""> -- select your county</option>
+								<option value='adams'>Adams</option>
+								<option value='alamosa'>Alamosa</option>
+								<option value='arapahoe'>Arapahoe</option>
+								<option value='archuleta'>Archuleta</option>
+								<option value='baca'>Baca</option>
+								<option value='bent'>Bent</option>
+								<option value='boulder'>Boulder</option>
+								<option value='broomfield'>Broomfield</option>
+								<option value='chaffee'>Chaffee</option>
+								<option value='cheyenne'>Cheyenne</option>
+								<option value='clear creek'>Clear Creek</option>
+								<option value='conejos'>Conejos</option>
+								<option value='costilla'>Costilla</option>
+								<option value='crowley'>Crowley</option>
+								<option value='custer'>Custer</option>
+								<option value='delta'>Delta</option>
+								<option value='denver'>Denver</option>
+								<option value='dolores'>Dolores</option>
+								<option value='douglas'>Douglas</option>
+								<option value='eagle'>Eagle</option>
+								<option value='el paso'>El Paso</option>
+								<option value='elbert'>Elbert</option>
+								<option value='fremont'>Fremont</option>
+								<option value='garfield'>Garfield</option>
+								<option value='gilpin'>Gilpin</option>
+								<option value='grand'>Grand</option>
+								<option value='gunnison'>Gunnison</option>
+								<option value='hinsdale'>Hinsdale</option>
+								<option value='huerfano'>Huerfano</option>
+								<option value='jackson'>Jackson</option>
+								<option value='jefferson'>Jefferson</option>
+								<option value='kiowa'>Kiowa</option>
+								<option value='kit carson'>Kit Carson</option>
+								<option value='la plata'>La Plata</option>
+								<option value='lake county'>Lake County</option>
+								<option value='larimer'>Larimer</option>
+								<option value='las animas'>Las Animas</option>
+								<option value='lincoln'>Lincoln</option>
+								<option value='logan'>Logan</option>
+								<option value='mesa'>Mesa</option>
+								<option value='mineral'>Mineral</option>
+								<option value='moffat'>Moffat</option>
+								<option value='montezuma'>Montezuma</option>
+								<option value='montrose'>Montrose</option>
+								<option value='morgan'>Morgan</option>
+								<option value='otero'>Otero</option>
+								<option value='ouray'>Ouray</option>
+								<option value='park'>Park</option>
+								<option value='phillips'>Phillips</option>
+								<option value='pitkin'>Pitkin</option>
+								<option value='prowers'>Prowers</option>
+								<option value='pueblo'>Pueblo</option>
+								<option value='rio blanco'>Rio Blanco</option>
+								<option value='rio grande'>Rio Grande</option>
+								<option value='routt'>Routt</option>
+								<option value='saguache'>Saguache</option>
+								<option value='san juan'>San Juan</option>
+								<option value='san miguel'>San Miguel</option>
+								<option value='sedgwick'>Sedgwick</option>
+								<option value='summit'>Summit</option>
+								<option value='teller'>Teller</option>
+								<option value='washington'>Washington</option>
+								<option value='weld'>Weld</option>
+								<option value='yuma'>Yuma</option>
+							</select>
+					        <input id="address" placeholder="Enter Your Home Address" size="40">
+					         <button type="button" id="geolocate"><i class="fa fa-location-arrow"></i></button>
+					        <button type="submit">Search</button>
+					    </form>
+						<div id="canvas"></div>
+						<div id="list">
+							<h3 style="display:none"><span class="closest">Closest </span>Voter Service & Polling Centers<span class="type">&nbsp;& Ballot Drop Locations</span> in <span class="county"></span> County</h3>
+							<ul></ul>
+						</div>
+					</div>
+				</div>
+				<script type="text/javascript">
+					$(document).ready( function() {
+						var election_map = new ElectionMap(map)
+
+						$('select#county').change( function() {
+							election_map.county_zoom( $(this).val() );
+						})
+						var $buttons = $('.menu .menu-item')
+						$buttons.click( function() {
+							$buttons.removeClass('selected');
+							var open_tab = $(this).addClass('selected').data('open_tab'),
+								$tab = $('[tab='+open_tab+']').show();
+							$('.tab').not($tab).hide();
+							if( open_tab == 'mail' ) {
+								election_map.set_type = 'all'
+								$('.block.map').addClass('all')
+							} else {
+								election_map.set_type = election_map.point_types.__default();
+								$('.block.map').removeClass('all')
+							}
+							election_map.render_map()
+						})
+					})
+				</script>
+
+	        	<div class="block phone">
+	        		<h1>Voter Hotline</h1>
+	        		<img src="img/phone.png">
+	        		<h3>866-OUR-VOTE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;866-687-8683</h3>
+	        		<h3>866-VE-Y-VOTA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;888-839-8682</h3>
+	        	</div>
+
+	        </div>
+	        <footer>
+	        	<a href="/"><img src="img/bottom-logo.png" class="bottom-logo"></a>
+	        	<div class="info">
+	        		<h2>Links</h2>
+	        		<div class="content">
+		        		<a href="/">Link</a>
+		        		<a href="/">Link</a>
+		        		<a href="/">Link</a>
+	        		</div>
+	        	</div>
+	        	<div class="info">
+	        		<h2>Contact</h2>
+	        		<div class="content">
+	        			<img src="img/phone.png">
+		        		<span>866-687-8683</span>
+		        		<span>888-839-8682</span>
+		        		<a href="/">Email</a>
+		        		<a href="/">Email</a>
+	        		</div>
+	        	</div>
+	        </footer>
+		</div>
+
+        <script type="text/javascript" src="js/main_2014.js"></script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true&libraries=geometry"></script>
+
+    </body>
+</html>

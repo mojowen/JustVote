@@ -1,0 +1,27 @@
+* About to connect() to tsapis.com port 443 (#0)
+*   Trying 50.16.209.89... * connected
+* Connected to tsapis.com (50.16.209.89) port 443 (#0)
+* SSL connection using DHE-RSA-AES256-SHA
+* Server certificate:
+* 	 subject: O=tsapis.com; OU=Domain Control Validated; CN=tsapis.com
+* 	 start date: 2011-01-04 18:50:16 GMT
+* 	 expire date: 2016-01-04 18:50:16 GMT
+* 	 subjectAltName: tsapis.com matched
+* 	 issuer: C=US; ST=Arizona; L=Scottsdale; O=GoDaddy.com, Inc.; OU=http://certificates.godaddy.com/repository; CN=Go Daddy Secure Certification Authority; serialNumber=07969287
+* 	 SSL certificate verify ok.
+> GET /services/voterbase_record_linkage?latitude=45.54844&longitude=-122.67330&fname=Scott&lname=Duncombe HTTP/1.1
+Host: tsapis.com
+Accept: */*
+Authorization: TS BDEA03016C347A5BC6DE:49gbkSey7WI7wls0/mZioOmS5aw=
+Content-Md5: c61b9f0cad05ad8651fa690059426aa1
+Content-Type: application/x-www-form-urlencoded
+Date: Fri, 07 Sep 2012 08:38:07 +0000
+
+< HTTP/1.1 403 FORBIDDEN
+< Date: Fri, 07 Sep 2012 08:37:49 GMT
+< Server: Apache/2.2.14 (Ubuntu)
+< Vary: Accept-Encoding
+< Transfer-Encoding: chunked
+< Content-Type: text/html; charset=utf-8
+< 
+* Connection #0 to host tsapis.com left intact
