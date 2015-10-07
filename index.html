@@ -53,6 +53,12 @@
 					<p>Su participaci&oacute;n en estas elecciones del 2012 es muy importante para nuestra comunidad. Nuestra comunidad tiene la oportunidad de ser el voto decisivo. Usted ser&aacute; dirigido a la pagina web JustVoteCo en la cual encontrara informaci&oacute;n que ser&aacute; &uacute;til a la hora de votar.</p>
 				</div>
 	        	<div class="menu">
+					<select class="mobile-menu" style="display:none;">
+						<option value="register">Register to Vote</option>
+						<option value="update">Update Your Registration</option>
+						<option value="person">Vote in Person</option>
+						<option value="mail">Vote Your Mail Ballot</option>
+					</select>
 	        		<div class="menu-item selected" data-open_tab="register">
 	        			<h1>Register to Vote</h1>
 	        		</div>
@@ -184,28 +190,47 @@
 					</div>
 				</div>
 				<script type="text/javascript">
-					$(document).ready( function() {
-						var election_map = new ElectionMap(map)
+				$(document).ready( function() {
+				    election_map = new ElectionMap(map)
 
-						$('select#county').change( function() {
-							election_map.county_zoom( $(this).val() );
-						})
-						var $buttons = $('.menu .menu-item')
-						$buttons.click( function() {
-							$buttons.removeClass('selected');
-							var open_tab = $(this).addClass('selected').data('open_tab'),
-								$tab = $('[tab='+open_tab+']').show();
-							$('.tab').not($tab).hide();
-							if( open_tab == 'mail' ) {
-								election_map.set_type = 'all'
-								$('.block.map').addClass('all')
-							} else {
-								election_map.set_type = election_map.point_types.__default();
-								$('.block.map').removeClass('all')
-							}
-							election_map.render_map()
-						})
+					$('select#county').change( function() {
+						election_map.county_zoom( $(this).val() );
 					})
+					var $buttons = $('.menu .menu-item')
+					$buttons.click( function() {
+						open_tab( $(this).data('open_tab') )
+						var scroll = $(window).scrollTop(),
+						    menu = $('.menu').offset().top
+						if( scroll < menu ) $(window).scrollTop( menu - 20 )
+					})
+					$('select.mobile-menu').change( function() {
+						open_tab( $(this).val() )
+					})
+					function open_tab(tab) {
+						var tab = tab.replace('#','');
+						var $tab = $('[tab='+tab+']').show();
+				                if( $tab.length == 0 ) return false;
+
+				                $button = $('[data-open_tab='+tab+']').addClass('selected')
+						$buttons.not($button).removeClass('selected');
+						$('.tab').not($tab).hide();
+						if( tab == 'mail' ) {
+							election_map.set_type = 'all'
+							$('.block.map').addClass('all')
+						} else {
+							election_map.set_type = election_map.point_types.__default();
+						$('.block.map').removeClass('all')
+						}
+						election_map.render_map()
+					}
+				        $('#canvas').click(
+				                function(e) { $(this).parent().addClass('on');
+				        })
+				        $(window).on('hashchange', function() {
+				                open_tab(document.location.hash);
+				        });
+				        open_tab(document.location.hash);
+				})
 				</script>
 
 	        	<div class="block phone">
