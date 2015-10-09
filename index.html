@@ -52,13 +52,13 @@
 					<h1>Gracias por visitar Todos A Votar CO</h1>
 					<p>Su participaci&oacute;n en estas elecciones del 2012 es muy importante para nuestra comunidad. Nuestra comunidad tiene la oportunidad de ser el voto decisivo. Usted ser&aacute; dirigido a la pagina web JustVoteCo en la cual encontrara informaci&oacute;n que ser&aacute; &uacute;til a la hora de votar.</p>
 				</div>
-	        	<div class="menu">
-					<select class="mobile-menu" style="display:none;">
-						<option value="register">Register to Vote</option>
-						<option value="update">Update Your Registration</option>
-						<option value="person">Vote in Person</option>
-						<option value="mail">Vote Your Mail Ballot</option>
-					</select>
+<div class="menu">
+	<select class="mobile-menu" style="display:none;">
+		<option value="register">Register to Vote</option>
+		<option value="update">Update Your Registration</option>
+		<option value="person">Vote in Person</option>
+		<option value="mail">Vote Your Mail Ballot</option>
+	</select>
 	        		<div class="menu-item selected" data-open_tab="register">
 	        			<h1>Register to Vote</h1>
 	        		</div>
@@ -74,7 +74,7 @@
 	        	</div>
 	        	<div class="active">
 					<div class="tab" tab="register" style="display:block;">
-					    <form target="_blank" action="http://registerincolorado.org/forms" method="post">
+					    <form target="_blank" action="https://www.registerincolorado.org/forms" method="post">
 					      	<input name="referrer" type="hidden" value="none (http://justvotecolorado.org/)">
 					        <input placeholder="First Name" name="voter[first_name]" class="half fade" type="text" size="15" title="First Name">
 					        <input placeholder="Last Name" name="voter[last_name]" class="half fade" type="text" size="15" title="Last Name"><br>
@@ -263,8 +263,10 @@
 	        	</div>
 	        </footer>
 		</div>
-
-        <script type="text/javascript" src="js/main_2014.js"></script>
+        <script type="text/javascript" src="js/electionMap.js"></script>
+        <script type="text/javascript">
+        	ElectionMap.prototype.config = {"types":{"drop off":{"long_title":"drop off","icon":"http://chart.apis.google.com\/chart?chst=d_map_pin_letter&chld=|00bdef"},"vote center":{"long_title":"vote center","icon":"http://chart.apis.google.com\/chart?chst=d_map_pin_letter&chld=|ff4429","default":"true"}},"states":["on","on"],"url":"https://spreadsheets.google.com\/feeds\/list\/1jCTNodsee2a36JrZaQ-QY0t4VN24cwP3VFi3gG77ixA\/ovnuykr\/public\/values"}
+		</script>
 		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true&libraries=geometry"></script>
 
     </body>
