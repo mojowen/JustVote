@@ -250,7 +250,7 @@ function ElectionMap(element, options) {
 
         var script = document.createElement('script')
         script.type = "text/javascript"
-        script.src = ["/web/20150512103002/https://maps.googleapis.com/maps/api/js?",
+        script.src = ["https://maps.googleapis.com/maps/api/js?",
                       "sensor=true&",
                       "libraries=geometry&",
                       "callback="+callback_name].join('')
@@ -310,7 +310,7 @@ function ElectionMap(element, options) {
         this.long_title = point_type.long_title
         this.icon = point_type.icon
         this.zIndex = Boolean(point_type['default']) ? 5 : 3
-        this.directions = '/web/20150512103002/https://www.google.com/maps/dir//'+[lat,lng].join(',')
+        this.directions = 'https://www.google.com/maps/dir//'+[lat,lng].join(',')
 
         this.tool_tip = false
 
