@@ -31,7 +31,7 @@ function ElectionMap(element, options) {
         this.geocoder = new google.maps.Geocoder()
 
         this.map = new google.maps.Map(
-            canvas,
+            element,
             {
                 minZoom: 7,
                 zoom: 7,
