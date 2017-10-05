@@ -292,7 +292,7 @@ function ElectionMap(element, options) {
             lng = this.latlng.split(',')[1]
         this.latlng = new google.maps.LatLng(lat, lng)
 
-        if( this.latlng.toString().search('NaN') !== -1 ) {
+        if( [lat,lng].join(',').search('NaN') !== -1 ) {
             log_error("could not create latlng object", data)
             this.errored = true
             return false
