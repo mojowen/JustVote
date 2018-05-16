@@ -1,7 +1,7 @@
 function ElectionMap(element, options) {
     var options = options || {}
     var config = options.config || this.constructor.prototype.config || {}
-    var log_errors = this.constructor.prototype.log_errors || false
+    var log_errors = this.constructor.prototype.log_errors || true
 
     this.create_projection = function() {
         var overlay = new google.maps.OverlayView()
@@ -31,7 +31,7 @@ function ElectionMap(element, options) {
         this.geocoder = new google.maps.Geocoder()
 
         this.map = new google.maps.Map(
-            element,
+            canvas,
             {
                 minZoom: 7,
                 zoom: 7,
@@ -135,8 +135,11 @@ function ElectionMap(element, options) {
         }
 
         for (var i = 0; i < nearby.length; i++) {
+            var current_scroll = $(window).scrollTop()
             $list.append(nearby[i][1].to_html())
+            $(window).scrollTop(current_scroll)
         };
+
         if( nearby.length > 0 ) $title.show().find('span.county').text(this.set_county || this.active_county)
         else $title.hide();
         this.create_projection()
@@ -423,9 +426,11 @@ function ElectionMap(element, options) {
                     title = $('<h3>'),
                     type = $('<em>').addClass('type'),
                     address = $('<p>'),
-                    hours = $('<p>')
+                    hours = $('<p>'),
+                    type_text = this.long_title
+                if( (this.helpertext || '').length > 0 ) type_text = [type_text,' (',this.helpertext,')'].join('')
                 title.text(this.location)
-                type.text(this.long_title)
+                type.text(type_text)
                 address.text([this.address,this.city].join(', '))
                 hours.html(this.fixed_hours())
 
@@ -452,6 +457,6 @@ function ElectionMap(element, options) {
         };
     }
     function log_error() {
-    	if( log_errors ) try { console.log(arguments); } catch(e) { }
+        if( log_errors ) try { console.log(arguments); } catch(e) { }
     }
 }
