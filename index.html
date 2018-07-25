@@ -251,10 +251,13 @@
 
 <script type="text/javascript">
 $(document).ready( function() {
-       election_map = new ElectionMap(map, { type: 'none' })
+	election_map = false
+       if( typeof window.map !== 'undefined' ) {
+	       election_map = new ElectionMap(map, { type: 'none' })
+       }
       
 	$('select#county').change( function() {
-		election_map.county_zoom( $(this).val() );
+		if( election_map ) election_map.county_zoom( $(this).val() );
 	})
 	var $buttons = $('.menu .menu-item')
 	$buttons.click( function() {
@@ -287,8 +290,8 @@ $(document).ready( function() {
                 $(this).parent().addClass('on');
         })
         $('#location_type').change(function() {
+		if( !election_map ) return;
                 $('.block.map').removeClass(election_map.set_type)
-
                 election_map.set_type = $(this).val()
                 election_map.render_map()
 
