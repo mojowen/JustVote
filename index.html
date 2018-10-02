@@ -292,7 +292,7 @@ $(document).ready( function() {
         $('#location_type').change(function() {
 		if( !election_map ) return;
                 $('.block.map').removeClass(election_map.set_type)
-                election_map.set_type = $(this).val()
+                election_map.set_type = $(this).val().toLowerCase()
                 election_map.render_map()
 
                 var titles = { 'vspc': 'VOTER SERVICE & POLLING CENTERS', 'dropbox': 'BALLOT DROP LOCATIONS'}
