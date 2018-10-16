@@ -431,7 +431,7 @@ function ElectionMap(element, options) {
                 if( (this.helpertext || '').length > 0 ) type_text = [type_text,' (',this.helpertext,')'].join('')
                 title.text(this.location)
                 type.text(type_text)
-                address.text([this.address,this.city].join(', '))
+                address.text(this.address)
                 hours.html(this.fixed_hours())
 
                 this.$elem = container.append(title, type, address, hours).addClass( this.is_open() ? '' : 'closed')
