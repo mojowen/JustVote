@@ -298,7 +298,7 @@ $(document).ready( function() {
                 var titles = { 'vspc': 'VOTER SERVICE & POLLING CENTERS', 'dropbox': 'BALLOT DROP LOCATIONS'}
                 var title = titles[election_map.set_type]
                 if( election_map.set_type === 'all' ) {
-                  title = [titles['vote center'],titles['drop off']].join(' and ')
+                  title = [titles['vspc'],titles['dropbox']].join(' and ')
                 }
                 $('.block.map').addClass(election_map.set_type)
                 $('span.title').text(title)
